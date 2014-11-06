@@ -1,0 +1,30 @@
+<ion-view title="Find A Book">
+    <ion-content>
+        <h1></h1>
+
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" ng-model="query" placeholder="Search by: Book or ISBN">
+            </label>
+            <label> Sort by: </label>
+                <select ng-model="orderProp">
+                    <option value="title">Title</option>
+                    <option value="value">Price</option>
+                    <option value="dateListed">Newest</option>
+                    <option value="condition">Condition</option>
+                </select>
+        </div>
+
+        <ion-list class="list">
+            <ion-item class="item item-icon-right" ng-repeat="book in books | filter:query | orderBy:orderProp" href="#/tab/textbook/{{book.id}}">
+                <i class="icon ion-ios7-arrow-right"></i>
+                <span>{{book.title}}</span>
+                <p>${{book.value}}</p>
+                <p>ISBN: {{book.isbn13}}</p>
+            </ion-item>
+        </ion-list>
+
+
+    </ion-content>
+</ion-view>

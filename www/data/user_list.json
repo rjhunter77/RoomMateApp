@@ -1,0 +1,111 @@
+[
+    {
+        "userName":"mike1000",
+        "fullName":"Mike Howard",
+        "phone":"8015559130",
+        "email":"mike@gmail.com",
+        "imageURL":"img/users/mike1000.jpg",
+        "rating":5,
+        "sellerID":1
+    },
+
+    {
+        "userName":"mrcool",
+        "fullName":"Merril Morrison",
+        "phone":"8015552839",
+        "email":"mandm@gmail.com",
+        "imageURL":"img/users/mrcool.jpg",
+        "rating":3,
+        "sellerID":2
+    },
+
+    {
+        "userName":"BuyMyBook",
+        "fullName":"Susan Monsen",
+        "phone":"8015559372",
+        "email":"susy@yahoo.com",
+        "imageURL":"img/users/BuyMyBook.jpg",
+        "rating":5,
+        "sellerID":3
+    },
+
+    {
+        "userName":"best_books10",
+        "fullName":"Jordan Hale",
+        "phone":"8375551326",
+        "email":"Jordan.hale@gmail.com",
+        "imageURL":"img/users/best_books10.jpg",
+        "rating":2,
+        "sellerID":4
+    },
+
+    {
+        "userName":"BuyMyBook",
+        "fullName":"Susan Monsen",
+        "phone":"8015559372",
+        "email":"susy@gmail.com",
+        "imageURL":"img/users/BuyMyBook.jpg",
+        "rating":5,
+        "sellerID":5
+    },
+
+    {
+        "userName":"leeeeroy",
+        "fullName":"Leroy Jenkins",
+        "phone":"8018376622",
+        "email":"leeerroyy@gmail.com",
+        "imageURL":"img/users/leeeeroy.jpg",
+        "rating":1,
+        "sellerID":6
+    },
+
+    {
+        "userName":"cooper",
+        "fullName":"Alice Cooper",
+        "phone":"8918472240",
+        "email":"cooper@hotmail.com",
+        "imageURL":"img/users/cooper.jpg",
+        "rating":1,
+        "sellerID":7
+    },
+
+    {
+        "userName":"charly",
+        "fullName":"Charles Parker",
+        "phone":"8013859932",
+        "email":"charlyp@yahoo.com",
+        "imageURL":"img/users/charly.jpg",
+        "rating":1,
+        "sellerID":8
+    },
+
+    {
+        "userName":"leeeeroy",
+        "fullName":"Leroy Jenkins",
+        "phone":"8018376622",
+        "email":"leeerroyy@gmail.com",
+        "imageURL":"img/users/leeeeroy.jpg",
+        "rating":1,
+        "sellerID":9
+    },
+
+    {
+        "userName":"best_books10",
+        "fullName":"Jordan Hale",
+        "phone":"8375551326",
+        "email":"Jordan.hale@gmail.com",
+        "imageURL":"img/users/best_books10.jpg",
+        "rating":2,
+        "sellerID":10
+    },
+
+    {
+        "userName":"j_rot",
+        "fullName":"Johnny Rotten",
+        "phone":"8389204833",
+        "email":"johnnyrotten@gmail.com",
+        "imageURL":"img/users/j_rot.jpg",
+        "rating":1,
+        "sellerID":11
+    }
+]

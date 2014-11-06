@@ -1,0 +1,56 @@
+<ion-view title="New">
+    <ion-content class="">
+        <form name="myForm" novalidate>
+            <div class="list">
+                <div class="control-group">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Book Title *</span>
+                        <input ng-model="textbook.name" name="name" required type="text" placeholder="Intro to College Algebra">
+
+                        <span class="error" ng-show="showValidationMessages && myForm.name.$error.required">Please insert a Textbook Name</span>
+                    </label>
+                </div>
+                <div class="control-group">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Course *</span>
+                        <input name="course" ng-model="textbook.course" required type="text" placeholder="DGM 3790">
+
+                        <span class="error" ng-show="showValidationMessages && myForm.course.$error.required">Please insert the name of the UVU course</span>
+                    </label>
+                </div>
+                <div class="control-group">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Asking Price (in dollars) *</span>
+                        <input ng-model="textbook.price" required name="price" type="number" placeholder="40">
+
+                        <span class="error" ng-show="showValidationMessages && myForm.price.$error.required">Please insert the price in number of dollars</span>
+
+                    </label>
+                </div>
+
+                <div class="control-group">
+                    <div class="padding">
+                        <span class="input-label">Condition *</span>
+                        <div class="conditionDescription">
+                            {{textbook.condition.description}}
+                        </div>
+                    </div>
+                    <div class="item range range-positive item-stacked-label no-border-top">
+                        <i class="icon ion-thumbsdown"></i>
+                        <input ng-model="textbook.condition.value" type="range" name="volume" min="1" max="5" ng-change="updateCondition(textbook)">
+                        <i class="icon ion-thumbsup"></i>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Ad Description</span>
+                        <textarea name="description" ng-model="textbook.description" placeholder="Comments"></textarea>
+                    </label>
+                </div>
+                <div class="padding">
+                    <button class="button button-block button-positive" ng-click="submit(myForm)">Submit</button>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
