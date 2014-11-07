@@ -1,6 +1,5 @@
 Roommate Financial Coordinator
 ============
-# A cool app for roommates to manage thier shared expences
 
 This App is made to both allow Roomates to create IOU's and make payments.  Roommates will be able to view a total (and filterable) history of the payments/iou's and will see thier overall payments and debts owed to them in one of the views.  
 
@@ -18,7 +17,7 @@ $ cd RoomMateApp
 
 #### Start Application in an ios Simulator (mac only)
 
-use the following commands inside of your console to activate the server
+use the following commands inside of the terminal to activate the server
 ```
 $ ionic platform add ios
 $ ionic build ios
