@@ -1,0 +1,26 @@
+<ion-view title="Settings">
+  <ion-content class="padding">
+    <h3>Roommates</h3>
+    <ion-list class="list">
+        <ion-item class="item item-icon-right" ng-repeat="roomMate in roomMates | filter:query | orderBy:orderProp">
+            <div>{{roomMate.name}}</div>
+            
+            	<i class='icon ion-close-circled delete-X' ng-click='remove(roomMate)'></i>
+            
+        </ion-item>
+    </ion-list>
+    <br/>
+    <div class="list">
+
+	  <div class="item item-input-inset">
+	    <label class="item-input-wrapper">
+	      <input ng-model='name' name='name' type="text" placeholder="Name">
+	    </label>
+	    <button class="button button-small button-positive" ng-click='add(name)'>
+	      Add New
+	    </button>
+	  </div>
+
+	</div>
+  </ion-content>
+</ion-view>

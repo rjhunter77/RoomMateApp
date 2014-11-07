@@ -20,3 +20,31 @@
 span.error {
     color: #BA0303;
 }
+
+.delete-X {
+	color: #D71212;
+	cursor: pointer;
+}
+
+.trans-by {
+	text-align: right;
+}
+
+.payDescription {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	color: #555;
+}
+
+.noPadTop {
+	margin-top: -15px;
+}
+
+.paid {
+	color: green;
+}
+
+.owes {
+	color: #BA0303;
+}

@@ -1,0 +1,26 @@
+<ion-view title="History">
+    <ion-content>
+        <h1></h1>
+
+        <ion-list class="list">
+            <ion-item class="item item-icon-right" ng-repeat="trans in transactions | filter:query | orderBy:date">
+                <div class="row noPadTop">
+                    <div class="col col-50">
+                        <span>{{trans.date}} - {{trans.time}}</span>
+                    </div>
+                     <div class="col col-50 trans-by">
+                        <span>by:{{getName(trans.by)}}</span>
+                    </div>
+                </div>
+                <div class="payDescription">
+                    <span>{{getName(trans.who)}}</span>
+                    <span class='{{trans.type}}'>{{trans.type}}</span>
+                    <span>{{getName(trans.recepient)}}</span>
+                    <span>${{trans.price}}</span>
+                </div>
+            </ion-item>
+        </ion-list>
+
+
+    </ion-content>
+</ion-view>
