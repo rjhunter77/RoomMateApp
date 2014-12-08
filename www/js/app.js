@@ -1,7 +1,48 @@
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'starter.directives', 'ngCookies'])
 
-.run(function($ionicPlatform) {
+.run(function($rootScope, $ionicPlatform, $cookies, $ionicModal) {
   $ionicPlatform.ready(function() {
+  //   console.log("COOKYS", $cookies);
+  //   $ionicModal.fromTemplateUrl('../templates/userModal.html', {
+  //     scope: $rootScope,
+  //     animation: 'slide-in-up',
+  //     hardwareBackButtonClose: false,
+  //     backdropClickToClose: false
+  //   }).then(function(modal) {
+  //     $rootScope.roommateModal = modal;
+
+  //     // When a user first gets to the application check to see if a cookie exists... if not send the question page.
+  //     if(!$cookies.user){
+  //        $rootScope.roommateModal.show();
+  //     } else {
+  //        $rootScope.checkForHouse();
+  //     }
+
+  //   });
+
+    $rootScope.checkForHouse = function(){
+      // This is called also after the user login function 
+      console.log("COOKYS-2", $cookies);
+
+      $ionicModal.fromTemplateUrl('../templates/householdModal.html', {
+        scope: $rootScope,
+        animation: 'slide-in-up',
+        hardwareBackButtonClose: false,
+        backdropClickToClose: false
+      }).then(function(modal) {
+        $rootScope.householdModal = modal;
+
+        // When a user first gets to the application check to see if a cookie exists... if not send the question page.
+        if(!$cookies.household){
+           $rootScope.householdModal.show();
+        };
+
+      });
+    };
+    $rootScope.checkForHouse();
+
+
+
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if(window.cordova && window.cordova.plugins.Keyboard) {

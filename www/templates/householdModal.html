@@ -1,0 +1,57 @@
+
+<ion-modal-view>
+<ion-header-bar>
+  <h1 class="title">Sign-In to your Place</h1>
+</ion-header-bar>
+<ion-content>
+
+
+  <div ng-controller="HouseholdCtrl" class='padding'>
+
+  <form novalidate class="simple-form">
+  	<h4>Join an existing household?</h4>
+  	<span>Get the ID from a roommate and paste here</span>
+   	<div class="list">
+	  <label class="item item-input">
+	    <input type="text" name='houseId' placeholder="123456789">
+	  </label>
+	</div>
+	<button class="button button-block button-positive" ng-click='submitLogin(loginForm)'>Join</button>
+  </form>
+
+
+
+  <br/>
+  <form novalidate class="simple-form">
+  	<h4>Create a new Household</h4>
+   	<h5>Roommates</h5>
+    <ion-list class="list">
+        <ion-item class="item item-icon-right" ng-repeat="roomMate in roomMates | filter:query | orderBy:orderProp">
+            <div>{{roomMate.name}}</div>
+            
+            	<i class='icon ion-close-circled delete-X' ng-click='remove(roomMate)'></i>
+            
+        </ion-item>
+    </ion-list>
+     <div class="list">
+
+	  <div class="item item-input-inset">
+	    <label class="item-input-wrapper">
+	      <input id='newName' ng-model='name' name='name' type="text" placeholder="Name">
+	    </label>
+	    <button class="button button-small button-positive" ng-click='add(name)'>
+	      Add New
+	    </button>
+	  </div>
+	<button class="button button-block button-positive" ng-click='createHousehold()'>Create Household
+	</button>
+  </form>
+
+
+
+</div>
+
+
+
+</ion-content>
+</ion-modal-view>

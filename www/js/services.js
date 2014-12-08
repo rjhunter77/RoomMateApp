@@ -1,41 +1,68 @@
-angular.module('starter.services', [])
+angular.module('starter.services', ['ngCookies'])
 
-/**
- * A simple example service that returns some data.
- */
-.factory('Textbooks', function($http) {
-  // Might use a resource here that returns a JSON array
-  var textbooks = [];
-
-  var getTextbooks = function(){
-      $http.get('data/book_list.json').success(function(data){
-          textbooks = data;
-          // console.log(data);
-      });
-  };
-
-  var setTextbooks = function(){
-
-  };
-
-  // Some fake testing data
-
-  // console.log(textbooks[3]);
+.factory('Household', ['$cookies','$http', function($cookies, $http) {
   return {
     all: function() {
-      getTextbooks();
-      return textbooks;
+      
+    },
+    get: function(householdId) {
+      
+    },
+    set: function(household){
+      
+    }
+  };
+}])
+.factory('Roommates', function($http) {
+  console.log("SUP?");
+  return {
+    all: function() {
+
+    },
+    get: function(roommateId) {
+      console.log("ROOMMATEID", roommateId);
+       var roommates_db = new PouchDB('http://dgm3790.iriscouch.com/roommates_db');
+         return roommates_db.get(roommateId, function(err, doc){
+              if(err){
+                  return err;
+              } else if(doc){
+                  return doc;
+              }
+          });
+    },
+    set: function(roommate){
+       var roommates_db = new PouchDB('http://dgm3790.iriscouch.com/roommates_db');
+
+        return roommates_db.put(
+            {
+                _id: roommate.email,
+                "name": roommate.name,
+                "password": roommate.password,
+            }, function(err, response) {
+                if(err){
+                    console.log("Roommate NOT SAVED", err);
+                    return err;
+                    //alert("The roomate was not saved");
+                } else if(response){
+                    console.log("Roomate SAVED", response);
+                    return response;
+                }
+
+            });
+    }
+  };
+})
+.factory('Transactions', function($http) {
+  
+  return {
+    all: function() {
+      
     },
     get: function(textbookId) {
-      // Simple index lookup
-      getTextbooks();
-      return textbooks[textbookId];
+     
     },
     set: function(textbook){
-      getTextbooks();
-      textbooks.push(textbook);
-      setTextbooks();
-      return textbooks;
+     
     }
   };
 });
