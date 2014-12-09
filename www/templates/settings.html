@@ -1,4 +1,11 @@
-<ion-view title="Settings">
+<ion-header-bar align-title="center" class="bar-positive">
+  <h1 class="title">Settings</h1>
+  <div class="buttons padding">
+    {{userName}}
+  </div>
+</ion-header-bar>
+<ion-view>
+
   <ion-content class="padding">
     <h3>Roommates</h3>
     <ion-list class="list">
@@ -22,8 +29,7 @@
 	  </div>
 
 	</div>
-    <h3>Household</h3>
-    <label>Address:</label>
-    1234 s 567 w Orem Ut
+    <h3>Household: {{householdId}}</h3>
+    
   </ion-content>
 </ion-view>

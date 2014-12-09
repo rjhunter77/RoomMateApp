@@ -8,15 +8,15 @@
 
   <div ng-controller="HouseholdCtrl" class='padding'>
 
-  <form novalidate class="simple-form">
+  <form novalidate name='joinForm' class="simple-form">
   	<h4>Join an existing household?</h4>
   	<span>Get the ID from a roommate and paste here</span>
    	<div class="list">
 	  <label class="item item-input">
-	    <input type="text" name='houseId' placeholder="123456789">
+	    <input type="text" ng-model='HHID' name='houseId' placeholder="123456789">
 	  </label>
 	</div>
-	<button class="button button-block button-positive" ng-click='submitLogin(loginForm)'>Join</button>
+	<button class="button button-block button-positive" ng-click='joinHousehold(joinForm)'>Join</button>
   </form>
 
 
